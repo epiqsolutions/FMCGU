@@ -15,7 +15,7 @@
 
     <import file="nbproject/build-impl.xml"/>
 
-    <property name="version.num" value="1.3"/>
+    <property name="version.num" value="1.4"/>
 
     <target name="-pre-jar">
         <buildnumber file="build.num"/>
