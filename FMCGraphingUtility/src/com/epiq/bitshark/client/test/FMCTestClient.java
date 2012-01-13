@@ -53,7 +53,7 @@ import java.util.concurrent.TimeoutException;
  */
 public class FMCTestClient extends FMCUartClient {
 
-    public static final boolean SHOW_TEST_SERVER = true;
+    public static final boolean SHOW_TEST_SERVER = false;
 
     public static final String TEST_DATA_FILENAME = "data/fmc_test_data.bin";
 
