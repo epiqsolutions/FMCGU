@@ -1,0 +1,57 @@
+
++---------------------------------+
+| Build Instructions (01/22/2011) |
++---------------------------------+
+
+Minimum Requirements:
+=====================
+
+- Java 6 JDK (http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+
+Recommended Build Tools:
+========================
+
+- NetBeans IDE (http://netbeans.org/downloads/index.html)
+- Apache Ant (http://ant.apache.org/)
+
+--------------------------------
+To build and run using NetBeans:
+--------------------------------
+1. From NetBeans, go to File > Open Project...
+2. Go to and select the FMCGraphingUtility/ Folder (ensure "Open as main project" is checked) and click Open
+3. Once project open, to build, go to Run > Build Main Project
+4. Then to run project, go to Run > Run Main Project
+   - Note: Depending on your operating system, you will need to change the run configuration
+           to either Windows, Linux 32bit, Linux 64bit, or OSX.  This run configuration
+           changes the directory in which to look for the native libraries required
+           for serial communication.
+
+--------------------------------------------------------------------
+To build and run using Ant (assuming Ant and Java are on your PATH):
+--------------------------------------------------------------------
+1. To build, cd to inside FMCGraphingUtility\ and type "ant jar"
+2. Then to run, type "java -Djava.library.path=./native-lib/<PLATFORM>/ -jar dist\FMCGraphingUtility.jar"
+   where <PLATFORM> is either windows, linux32, linux64, or OSX.
+   
+--------------------------------------------------
+To build using javac (using no other build tools):
+--------------------------------------------------
+TBD
+
+-----------------------
+To build using Eclipse:
+-----------------------
+TBD
+
+************************************************
+* Notes when building and running under Linux: *
+************************************************
+
+- The built application may need to be run as root in order to
+  run with the correct permissions required for COM port communication
+
+- Some distributions of Linux come pre-installed with a version of the Java
+  environment provided by the "OpenJDK" project.  The OpenJDK flavor of Java can
+  be expected to work incorrectly with this application so ensure when building
+  and running, the Sun/Oracle Java environment is used (check using "which java"
+  and "java -version").
